@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+  <meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script language="JavaScript">
+    
+    function changeMovie() {
+      document.getElementById('p1').innerHTML =
+              document.getElementById("title").value;
+
+
+        document.getElementById('p2').innerHTML = 
+                    document.getElementById("review").value;
+
+
+      document.getElementById('updateReview').style.display="none"; 
+    }
+
+    function showDiv() {
+      document.getElementById('updateReview').style.display="block"; 
+    }
+  </script>
+
+  </head>
+<body>
+
+  <form>
+    <div class="container" id="div1" style="">
+    <div class=jumbotron>
+    <label><h1>Movie Review</h1></label>
+
+     <p id="p1">ZNMD </p>
+     <p id="p2"> Good movie </p>
+
+  <input type="button" onclick="showDiv();" id="submit1" value="update"><br/>
+  </div>
+    </div>  
+
+    <br>
+    <div class="bg-danger" id="updateReview" style="display:none;">
+<!-- 
+<div style="display: none;" id="hiddenText">This is hidden</div>-->
+
+
+   <label for="title">Title</label>
+   <input type="text" name="title" id="title"></p>
+<br>
+   <p> <label for=" Write review">Review</label>
+   <input type="text" name="review" id="review"></p>
+
+  </form>
+
+  <input type="button" onclick="changeMovie();" id="submit2" value="Submit"><br/>
+  
+  
+</div>
+  <p><span id='display1'></span></p>
+  <p><span id='display'></span></p>
+
+</body>
+</html>
