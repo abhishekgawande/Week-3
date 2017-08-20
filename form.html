@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+<script>
+
+function validation() {
+    var x = document.forms["myform"]["title"].value;
+    if (x == "") {
+        alert("Title must be filled out");
+		return false;
+ 	}
+	var y = document.forms["myform"]["review"].value;
+    if (y == "") {
+        alert("Review must be filled out");
+        return false;
+    }
+
+<!--	  var z = document.forms["myform"]["title"].value;
+
+    if (z.match(/^[a-zA-Z]+$/)) 
+    {
+      return true;
+    }
+	else{
+	alert("Invalid charachters");
+	return false;
+	}
+  
+}
+-->
+
+
+</script>
+</head>
+<body>
+<div class="logo"></div>
+<div class="reviewblock">
+<form name="myform" action="first.php" method="post" onsubmit=" return validation()">
+<h1>My Review </h1>
+
+<p>Title	<input type="text" name="title"></p>
+<p>Review</p> 
+<textarea name="review" ></textarea>
+<input type="submit" value="Submit" >
+</form>
+</div>
+
+</body>
+</html>
